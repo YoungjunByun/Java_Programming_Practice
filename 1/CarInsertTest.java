@@ -1,12 +1,13 @@
 package fc.java.part3;
 
+import fc.java.model.CarDAO;
 import fc.java.model.CarDTO;
 
 import java.util.Scanner;
 
-public class CarTest {
+public class CarInsertTest {
     public static void main(String[] args) {
-        //자동차의 정보를 키보드로부터 입력받아서 다름 메서드로 이동해야하는 경우의 코드를 작성하라.
+        //자동차 정보를 키보드로 부터 입력을 받아서 DB에 저장을 하세요
         Scanner scan = new Scanner(System.in);
         System.out.println("자동차 일련번호 : ");
         int carSn = scan.nextInt();
@@ -41,10 +42,9 @@ public class CarTest {
         car.carOwner = carOwner;
         car.carYear = carYear;
         car.carType = carType;
-        carInfoPrint(car);
-    }
-    //매개변수로 자동차의 정보를 받아서 출력하는 메서드를 정의하시오
-    public static void carInfoPrint(CarDTO car){
-        System.out.println(car.carSn + "\t" + car.carName);
+
+        CarDAO dao = new CarDAO();
+        dao.carInsert(car);
+        dao.carSelect();
     }
 }
