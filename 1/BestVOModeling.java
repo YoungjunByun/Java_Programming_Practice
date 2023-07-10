@@ -1,0 +1,11 @@
+package fc.java.part3;
+
+import fc.java.model.MovieVO;
+
+public class BestVOModeling {
+    public static void main(String[] args) {
+        MovieVO vo = new MovieVO("아바타", 20221111, "제이크 설리", "액션", 192.4f, 12);
+        System.out.println(vo.toString());
+
+    }
+}
