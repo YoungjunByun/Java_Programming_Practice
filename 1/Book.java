@@ -1,10 +1,62 @@
-//책(Object) : 제목, 가격, 출판사, 저자, 페이지수, ISBN
+package fc.java.model2;
+
 public class Book {
-    //Book은 UDDT이므로 main을 만들지 않는다
-    public String title;
-    public int price;
-    public String company;
-    public String author;
-    public int page;
-    public String isbn;
+    //멤버변수, 상태정보, 속성(property)
+    private String title;
+    private int price;
+    private String company;
+    private String author;
+
+    public Book() { //default 생성자
+    }
+    //생성자 메서드의 Overloading(중복정의)
+    public Book(String title, int price, String company, String author) {
+        this.title = title;
+        this.price = price;
+        this.company = company;
+        this.author = author;
+    }
+    // setter, getter
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+    // Object->toString() 재정의
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", price=" + price +
+                ", company='" + company + '\'' +
+                ", author='" + author + '\'' +
+                '}';
+    }
 }

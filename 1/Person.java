@@ -1,20 +1,38 @@
-package fc.java.part3;
-//object = 상태정보(멤버변수) + 행위정보(멤버메서드)
+package fc.java.model2;
+
 public class Person {
-    public String name;
-    public int age;
-    public String phone;
-    //기본생성자 메서드
+    private String name;
+    private int age;
     public Person(){
 
     }
-    public void play(){
-        System.out.println("운동을 한다.");
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
-    public void eat(){
-        System.out.println("음식을 먹다.");
+
+    public String getName() {
+        return name;
     }
-    public void walk(){
-        System.out.println("걷다.");
+
+    public void setName(String name) {
+        this.name = name;
     }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
 }

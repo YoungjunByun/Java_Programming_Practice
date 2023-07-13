@@ -1,7 +1,7 @@
-package fc.java.poly;
+package fc.java.model2;
 
 public class B {
-    public void printGo(){
-        System.out.println("나는 B 입니다.");
+    public void display(){
+        System.out.println("나는 B이다.");
     }
 }
